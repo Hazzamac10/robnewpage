@@ -1461,3 +1461,6 @@ html[data-style="fresh"] .btn-mini { border-radius: 999px; }
 html[data-style="fresh"] .footer { background: #f8fbff; color: #4b5563; }
 html[data-style="fresh"] .footer-section h4 { color: #1f2937; }
 html[data-style="fresh"] .footer-bottom { border-top: 1px solid var(--border-color); color: #6b7280; }
+
+/* Test to ensure CSS is loading */
+body { background: #f0f0f0 !important; }
