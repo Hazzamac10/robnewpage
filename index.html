@@ -3,41 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>RP PROJECTS - Professional Extension Design & Planning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to My Website</h1>
-            <p>A simple webpage hosted on GitHub Pages</p>
-        </header>
-        
-        <main>
-            <section class="hero">
-                <h2>Hello World!</h2>
-                <p>This is a simple webpage that will be hosted on GitHub Pages.</p>
-            </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <img src="CXBD5052.JPG" alt="RP PROJECTS Logo" class="logo-image" data-remove-bg="white">
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button type="button" class="btn-mini mini-ghost" data-theme="blue">Blue</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text reveal">
+                <h1 class="hero-title">
+                    Professional Extension Design & Planning
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your home with expert architectural design, precise cost estimation, 
+                    and comprehensive planning services. From concept to completion, we deliver 
+                    exceptional results for residential extensions.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('services')">
+                        Our Services
+                    </button>
+                    
+                    <button class="btn-secondary" onclick="scrollToSection('contact')">
+                        Get Quote
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img
+                    class="ai-hero-img"
+                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80"
+                    alt="Modern architectural facade"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive architectural solutions for residential extensions</p>
+            </div>
             
-            <section class="features">
-                <div class="feature-card">
-                    <h3>Fast</h3>
-                    <p>Lightning fast loading times</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon">📐</div>
+                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Professional architectural drawings and 3D visualizations tailored to your specific requirements and local planning regulations.</p>
+                    <ul class="service-features">
+                        <li>Planning permission drawings</li>
+                        <li>3D modeling and visualization</li>
+                        <li>Technical specifications</li>
+                        <li>Building regulations compliance</li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>Simple</h3>
-                    <p>Clean and minimal design</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon">💰</div>
+                    </div>
+                    <h3>Cost Estimation</h3>
+                    <p>Detailed cost analysis and budget planning to ensure your extension project stays within your financial parameters.</p>
+                    <ul class="service-features">
+                        <li>Material cost breakdown</li>
+                        <li>Labor cost estimation</li>
+                        <li>Budget optimization</li>
+                        <li>Value engineering</li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <h3>Free</h3>
-                    <p>Hosted for free on GitHub</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon">📋</div>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p>End-to-end project coordination from initial consultation through to completion, ensuring smooth execution.</p>
+                    <ul class="service-features">
+                        <li>Planning application support</li>
+                        <li>Contractor coordination</li>
+                        <li>Quality assurance</li>
+                        <li>Timeline management</li>
+                    </ul>
                 </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>&copy; 2024 My GitHub Pages Site</p>
-        </footer>
-    </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Started</h2>
+                <p class="section-subtitle">Ready to transform your home?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Discuss Your Project</h3>
+                    <p>Our team of expert architects and designers is ready to bring your extension vision to life. Get in touch for a consultation.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hhmccaryhy26@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+44 20 7123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formsubmit.co/hhmccaryhy26@outlook.com" method="POST">
+                    <input type="hidden" name="_subject" value="New enquiry from RP PROJECTS website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Select Project Type</option>
+                            <option value="extension">House Extension</option>
+                            <option value="loft">Loft Conversion</option>
+                            <option value="basement">Basement Conversion</option>
+                            <option value="conservatory">Conservatory</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-container">
+                            <img src="CXBD5052.JPG" alt="RP PROJECTS Logo" class="logo-image footer-logo-img" data-remove-bg="white">
+                        </div>
+                    </div>
+                    <p>Professional architectural services for residential extensions. From design to completion, we deliver exceptional results.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Architectural Design</a></li>
+                        <li><a href="#services">Cost Estimation</a></li>
+                        <li><a href="#services">Project Management</a></li>
+                        <li><a href="#services">Planning Permission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RP PROJECTS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
