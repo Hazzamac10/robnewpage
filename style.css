@@ -38,11 +38,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-light);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .nav-container {
@@ -66,7 +66,7 @@ body {
 }
 
 .logo-image {
-    height: 40px;
+    height: 84px;
     width: auto;
 }
 
@@ -87,7 +87,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .nav-link.active::after {
@@ -118,9 +118,9 @@ body {
 }
 
 .btn-mini:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 .hamburger {
@@ -139,43 +139,18 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    padding: 9rem 0 4.5rem;
+    background: linear-gradient(135deg, #f9fbff 0%, #eef4ff 100%);
     position: relative;
     overflow: hidden;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
-    background-size: 32px 32px;
-    z-index: 1;
-    pointer-events: none;
+    content: none;
 }
 
 .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cpath d='M80 80 L720 80 L720 520 L80 520 Z' fill='none' stroke='%230ea5e9' stroke-width='1.6' opacity='0.12'/%3E%3Cpath d='M80 80 L420 80 L420 320 L80 320 Z' fill='none' stroke='%230ea5e9' stroke-width='1.2' opacity='0.1'/%3E%3Cpath d='M420 80 L720 80 L720 320 L420 320 Z' fill='none' stroke='%230ea5e9' stroke-width='1.2' opacity='0.1'/%3E%3Cpath d='M80 320 L280 320 L280 520 L80 520 Z' fill='none' stroke='%230ea5e9' stroke-width='1.2' opacity='0.1'/%3E%3Cpath d='M280 320 L520 320 L520 520 L280 520 Z' fill='none' stroke='%230ea5e9' stroke-width='1.2' opacity='0.1'/%3E%3Cpath d='M520 320 L720 320 L720 520 L520 520 Z' fill='none' stroke='%230ea5e9' stroke-width='1.2' opacity='0.1'/%3E%3Cpath d='M120 200 L380 200 M460 200 L680 200' stroke='%230ea5e9' stroke-width='0.8' opacity='0.08'/%3E%3Cpath d='M200 120 L200 280 M600 120 L600 280' stroke='%230ea5e9' stroke-width='0.8' opacity='0.08'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 450'%3E%3Cpath d='M60 100 L640 100 L640 380 L60 380 Z' fill='none' stroke='%230ea5e9' stroke-width='1.4' opacity='0.12'/%3E%3Cpath d='M60 240 L640 240' stroke='%230ea5e9' stroke-width='1.1' opacity='0.1'/%3E%3Cpath d='M120 180 L200 180 L200 220 L120 220 Z M240 180 L320 180 L320 220 L240 220 Z M360 180 L440 180 L440 220 L360 220 Z M480 180 L560 180 L560 220 L480 220 Z' fill='none' stroke='%230ea5e9' stroke-width='0.9' opacity='0.1'/%3E%3Cpath d='M300 300 L340 300 L340 360 L300 360 Z' fill='none' stroke='%230ea5e9' stroke-width='1' opacity='0.1'/%3E%3C/svg%3E");
-    background-position: top left, bottom right;
-    background-repeat: no-repeat;
-    background-size: 50%, 45%;
-    z-index: 1;
-    opacity: 0.4;
-    pointer-events: none;
+    content: none;
 }
 
 .hero-content {
@@ -195,7 +170,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
@@ -263,10 +238,10 @@ body {
 
 .ai-hero-img {
     width: 100%;
-    height: 400px;
+    height: 460px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 24px 48px -20px rgba(24, 106, 198, 0.35), 0 12px 24px -12px rgba(24, 106, 198, 0.2);
 }
 
 .hero-stats {
@@ -604,9 +579,8 @@ body {
         gap: 2rem;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
-    }
+    .hero-title { font-size: 2.4rem; }
+    .logo-image { height: 64px; }
     
     .hero-stats {
         grid-template-columns: 1fr;
@@ -623,10 +597,7 @@ body {
     }
     
     .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
+    .btn-secondary { width: 100%; text-align: center; }
 }
 
 @media (max-width: 480px) {
